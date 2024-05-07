@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // models.Activo.belongsToMany(models.Etiqueta, {through: models.TipoDeActivo, foreignKey: 'activo'}); //Un activo puede tener muchas etiquetas
+      models.Activo.belongsToMany(models.Etiqueta, {through: models.TipoDeActivo, foreignKey: 'activo'}); //Un activo puede tener muchas etiquetas
       models.Activo.belongsTo(models.Responsable, {foreignKey: 'responsableID', as:'responsable'}); //Un activo tiene un solo responsable
       models.Activo.belongsTo(models.Ubicacion, {foreignKey: 'ubicacionID', as:'ubicacion'}); //Un activo tiene una sola ubicación
     }

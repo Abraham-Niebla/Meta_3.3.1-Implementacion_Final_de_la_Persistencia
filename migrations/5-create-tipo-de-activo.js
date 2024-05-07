@@ -3,7 +3,7 @@
 module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.createTable("TipoDeActivos", {
-            id: {
+            id_t: {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
@@ -13,23 +13,23 @@ module.exports = {
                 type: Sequelize.INTEGER, //Tipo de dato
                 allowNull: false, //Poder dejarlo vacio
                 unique: false, //No se podrán repetir valores
-                // references: {
-                //     model: "Activos",
-                //     key: "id_a",
-                // },
-                // onUpdate: "CASCADE",
-                // onDelete: "CASCADE",
+                references: {
+                    model: "Activos",
+                    key: "id_a",
+                },
+                onUpdate: "CASCADE",
+                onDelete: "CASCADE",
             },
             etiqueta: {
                 type: Sequelize.INTEGER, //Tipo de dato
                 allowNull: false, //Poder dejarlo vacio
                 unique: false, //No se podrán repetir valores
-                // references: {
-                //     model: "Etiquetas",
-                //     key: "id_e",
-                // },
-                // onUpdate: "CASCADE",
-                // onDelete: "CASCADE",
+                references: {
+                    model: "Etiquetas",
+                    key: "id_e",
+                },
+                onUpdate: "CASCADE",
+                onDelete: "CASCADE",
             },
             createdAt: {
                 allowNull: false,
