@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      models.Ubicacion.hasMany(models.Activo, {foreignKey: 'ubicacion', as: 'activos'}); //Una ubicación puede tener muchos activos
+      models.Ubicacion.hasMany(models.Activo, {foreignKey: 'ubicacion_id', as: 'activos'}); //Una ubicación puede tener muchos activos
 
     }
   }

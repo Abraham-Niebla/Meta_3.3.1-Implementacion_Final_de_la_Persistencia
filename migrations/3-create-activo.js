@@ -24,7 +24,7 @@ module.exports = {
                 allowNull: true, //Poder dejarlo vacio
                 unique: false, //No se podrán repetir valores
             },
-            responsable: {
+            responsableID: {
                 //Llave foranea
                 type: Sequelize.INTEGER,
                 references: {
@@ -34,7 +34,7 @@ module.exports = {
                 onUpdate: "CASCADE",
                 onDelete: "CASCADE",
             },
-            ubicacion: {
+            ubicacionID: {
                 //Llave foranea
                 type: Sequelize.INTEGER,
                 references: {

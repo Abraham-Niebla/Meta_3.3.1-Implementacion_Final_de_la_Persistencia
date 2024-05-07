@@ -17,23 +17,23 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.INTEGER, //Tipo de dato
                 allowNull: false, //Poder dejarlo vacio
                 unique: false, //No se podrán repetir valores
-                references: {
-                    model: 'Activos',
-                    key: 'id_a'
-                  },
-                  onUpdate: 'CASCADE',
-                  onDelete: 'CASCADE'
+                // references: {
+                //     model: "Activos",
+                //     key: "id_a",
+                // },
+                // onUpdate: "CASCADE",
+                // onDelete: "CASCADE",
             },
             etiqueta: {
                 type: DataTypes.INTEGER, //Tipo de dato
                 allowNull: false, //Poder dejarlo vacio
                 unique: false, //No se podrán repetir valores
-                references: {
-                    model: 'Etiquetas',
-                    key: 'id_e'
-                  },
-                  onUpdate: 'CASCADE',
-                  onDelete: 'CASCADE'
+                // references: {
+                //     model: "Etiquetas",
+                //     key: "id_e",
+                // },
+                // onUpdate: "CASCADE",
+                // onDelete: "CASCADE",
             },
         },
         {
